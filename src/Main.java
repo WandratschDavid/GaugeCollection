@@ -1,3 +1,8 @@
+/**class Main
+ * @authors David Wandratsch, Moritz Kronberger, Matteo Falkenberg
+ * @version 1.20, 03.11.2020
+ */
+
 import javafx.application.Application;
 import javafx.event.EventHandler;
 import javafx.geometry.Insets;
@@ -11,7 +16,7 @@ import javafx.stage.Stage;
 
 public class Main extends Application
 {
-    GaugeBase gb = new GaugeBase();
+    MaFaBar falkenbar = new MaFaBar();
     TextField txtValue = new TextField();
 
     public static void main(String[] args)
@@ -32,7 +37,7 @@ public class Main extends Application
                 try
                 {
                     int v = Integer.parseInt(txtValue.getText());
-                    gb.setValue(v);
+                    falkenbar.setValue(v);
                 }
                 catch(Exception ex)
                 {
@@ -42,8 +47,8 @@ public class Main extends Application
             }
         };
 
-        gb.init(500, 500);
-        gb.setValue(45);
+        falkenbar.init(400, 50);
+        falkenbar.setValue(45);
 
         Button btnValue = new Button();
         btnValue.setText("New Value");
@@ -52,7 +57,7 @@ public class Main extends Application
         VBox vBox = new VBox();
         vBox.setPadding(new Insets(10, 50, 50, 50));
         vBox.setSpacing(20);
-        vBox.getChildren().addAll(gb, txtValue, btnValue);
+        vBox.getChildren().addAll(falkenbar, txtValue, btnValue);
 
         //Creating a Scene
         Scene scene = new Scene(vBox);
