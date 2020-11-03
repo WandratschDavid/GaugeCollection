@@ -17,7 +17,7 @@ public class DavidsGaugeBar extends Group
 
         ProgressIndicator p1 = new ProgressIndicator();
         p1.setPrefSize(100,100);
-        p1.setProgress(this.value);
+        p1.setProgress(this.value / 100);
 
         rootBox.getChildren().add(p1);
 

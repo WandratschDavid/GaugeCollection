@@ -27,6 +27,14 @@ public class MoKrBar extends Group
         final ProgressIndicator pi = new ProgressIndicator();
         pi.setMinSize(100,100);
 
+        Rectangle hidePrevious = new Rectangle();
+        hidePrevious.setX(0);
+        hidePrevious.setY(0);
+        hidePrevious.setWidth(radius);
+        hidePrevious.setHeight(radius);
+        hidePrevious.setFill(Color.WHITESMOKE);
+        this.getChildren().add(hidePrevious);
+
         value = value / 100;
 
 

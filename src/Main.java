@@ -40,6 +40,7 @@ public class Main extends Application
                 {
                     int v = Integer.parseInt(txtValue.getText());
                     falkenbar.setValue(v);
+                    DavidsBar.setValue(v);
                     moKrBar.setValue(v);
                 }
                 catch(Exception ex)
@@ -64,7 +65,7 @@ public class Main extends Application
         VBox vBox = new VBox();
         vBox.setPadding(new Insets(10, 50, 50, 50));
         vBox.setSpacing(20);
-        vBox.getChildren().addAll(falkenbar, DavidsBar,moKrBar, txtValue, btnValue);
+        vBox.getChildren().addAll(falkenbar, DavidsBar, moKrBar, txtValue, btnValue);
 
         //Creating a Scene
         Scene scene = new Scene(vBox);
