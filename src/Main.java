@@ -17,6 +17,7 @@ import javafx.stage.Stage;
 public class Main extends Application
 {
     MaFaBar falkenbar = new MaFaBar();
+    DavidsGaugeBar DavidsBar = new DavidsGaugeBar();
     TextField txtValue = new TextField();
 
     public static void main(String[] args)
@@ -49,6 +50,8 @@ public class Main extends Application
 
         falkenbar.init(400, 50);
         falkenbar.setValue(45);
+        DavidsBar.init(100, 100);
+        DavidsBar.setValue(25);
 
         Button btnValue = new Button();
         btnValue.setText("New Value");
@@ -57,7 +60,7 @@ public class Main extends Application
         VBox vBox = new VBox();
         vBox.setPadding(new Insets(10, 50, 50, 50));
         vBox.setSpacing(20);
-        vBox.getChildren().addAll(falkenbar, txtValue, btnValue);
+        vBox.getChildren().addAll(falkenbar, DavidsBar, txtValue, btnValue);
 
         //Creating a Scene
         Scene scene = new Scene(vBox);
